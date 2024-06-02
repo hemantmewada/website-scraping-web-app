@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: Helvetica;
+  src: url("/fonts/Helvetica.ttf");
+}
+
+html, * {
+  font-family: Helvetica;
+  font-size: 16px;
+  background-color: #F6F6F4;
+}
+.main-table *,
+.detail *,
+nav *{
+  background: #FFF;
+}
+div#cell-1-undefined,
+div#cell-2-undefined,
+div[data-column-id="1"],
+div[data-column-id="2"]{
+  max-width: 200px;
+}
+div#cell-3-undefined,
+div[data-column-id="3"]{
+  max-width: 400px; 
+}
