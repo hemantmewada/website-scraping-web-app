@@ -72,27 +72,72 @@ const Detail = () => {
                 </div>
             </div>
         </nav>
-        <div className="flex flex-col w-full pt-5">
+        <div className="flex flex-col w-full px-2 mt-2 mx-2 rounded-lg">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-4">
                 {/* first */}
-                <div className="col-span-2 md:col-span-1 pt-0 mt-8">
+                <div className="col-span-2 md:col-span-1 pt-0 mt-4 mr-1">
                     <div className='w-full bg-white border-gray-200 p-4 mt-2 mx-2 rounded-lg'>
                         <h1 className='font-bold text-xl'>Company Details</h1>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam sunt non fugiat dolores obcaecati commodi soluta fugit placeat, a explicabo voluptatum, architecto quibusdam voluptatem optio, rerum deleniti ipsum. Quis, dicta?
-                        Vero perferendis ex vel,  voluptatum officia veniam ratione modi natus hic expedita dolorem nostrum dolor quis ducimus perspiciatis asperiores eveniet. Voluptate numquam in alias modi totam provident nulla! Minima!
-                        Distinctio porro accusamus laboriosam autemetur adipisicing elit. Quisquam sunt non fugiat dolores obcaecati commodi soluta fugit placeat, a explicabo voluptatum, architecto quibusdam voluptatem optio, rerum deleniti ipsum. Quis, dicta?
-                        Vero perferendis ex vel,  voluptatum officia veniam ratione modi natus hic expedita dolorem nostrum dolor quis ducimus perspiciatis asperiores eveniet. Voluptate numquam in alias modi totam provident nulla! Minima!
-                        Distinctio porro accusamus laboriosam autemetur adipisicing elit. Quisquam sunt non fugiat dolores obcaecati commodi soluta fugit placeat, a explicabo voluptatum, architecto quibusdam voluptatem optio, rerum deleniti ipsum. Quis, dicta?
-                        Vero perferendis ex vel,  voluptatum officia veniam ratione modi natus hic expedita dolorem nostrum dolor quis ducimus perspiciatis asperiores eveniet. Voluptate numquam in alias modi totam provident nulla! Minima!
-                        Distinctio porro accusamus laboriosam autemetur adipisicing elit. Quisquam sunt non fugiat dolores obcaecati commodi soluta fugit placeat, a explicabo voluptatum, architecto quibusdam voluptatem optio, rerum deleniti ipsum. Quis, dicta?
-                        Vero perferendis ex vel,  voluptatum officia veniam ratione modi natus hic expedita dolorem nostrum dolor quis ducimus perspiciatis asperiores eveniet. Voluptate numquam in alias modi totam provident nulla! Minima!
-                        Distinctio porro accusamus laboriosam autemetur adipisicing elit. Quisquam sunt non fugiat dolores obcaecati commodi soluta fugit placeat, a explicabo voluptatum, architecto quibusdam voluptatem optio, rerum deleniti ipsum. Quis, dicta?
-                        Vero perferendis ex vel,  voluptatum officia veniam ratione modi natus hic expedita dolorem nostrum dolor quis ducimus perspiciatis asperiores eveniet. Voluptate numquam in alias modi totam provident nulla! Minima!
-                        Distinctio porro accusamus laboriosam autem sequi! Suscipit ipsam, enim repellat iusto esse quae eveniet provident earum dicta accusamus, ad tenetur harum magni illo obcaecati, rem ratione. Necessitatibus autem officia ab!</p>
+                        <div className='mt-4 pb-2'>
+                            <div className='flex flex-row gap gap-2 items-center text-[#778599]'>
+                                <img src="/icons/globe.svg" alt="" />
+                                Website
+                            </div>
+                            <p>{data.url}</p>
+                        </div>
+                        <div className='mt-4 pb-2'>
+                            <div className='flex flex-row gap gap-2 items-center text-[#778599]'>
+                                <img src="/icons/detail.svg" alt="" />
+                                Description
+                            </div>
+                            <p>{short(data.description, 150)}</p>
+                        </div>
+                        <div className='mt-4 pb-2'>
+                            <div className='flex flex-row gap gap-2 items-center text-[#778599]'>
+                                <img src="/icons/mail-search.svg" alt="" />
+                                Email
+                            </div>
+                            <p>{data.email}</p>
+                        </div>
+                        <div className='mt-4 pb-2'>
+                            <div className='flex flex-row gap gap-2 items-center text-[#778599]'>
+                                <img src="/icons/facebook-1.svg" alt="" />
+                                Facebook
+                            </div>
+                            <p>{data.fb}</p>
+                        </div>
+                        <div className='mt-4 pb-2'>
+                            <div className='flex flex-row gap gap-2 items-center text-[#778599]'>
+                                <img src="/icons/instagram.svg" alt="" />
+                                Instagram
+                            </div>
+                            <p>{data.insta}</p>
+                        </div>
+                        <div className='mt-4 pb-2'>
+                            <div className='flex flex-row gap gap-2 items-center text-[#778599]'>
+                                <img src="/icons/twitter-1.svg" alt="" />
+                                Twitter
+                            </div>
+                            <p>{data.twitter}</p>
+                        </div>
+                        <div className='mt-4 pb-2'>
+                            <div className='flex flex-row gap gap-2 items-center text-[#778599]'>
+                                <img src="/icons/linkedin-1.svg" alt="" />
+                                Linkedin
+                            </div>
+                            <p>{data.linkedin}</p>
+                        </div>
+                        <div className='mt-4 pb-2'>
+                            <div className='flex flex-row gap gap-2 items-center text-[#778599]'>
+                                <img src="/icons/location-marker.svg" alt="" />
+                                Address
+                            </div>
+                            <p>{data.address}</p>
+                        </div>
                     </div>
                 </div>
                 {/* second */}
-                <div className="col-span-2 md:col-span-2 pt-0 mt-8">
+                <div className="col-span-2 md:col-span-2 pt-0 mt-4">
                     <div className='w-full bg-white border-gray-200 p-4 mt-2 mx-2 rounded-lg'>
                         <div className='flex flex-row gap-2'>
                             <img src="/icons/camera.svg" alt="" />
