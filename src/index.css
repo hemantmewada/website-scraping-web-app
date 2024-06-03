@@ -17,6 +17,10 @@ html, * {
 nav *{
   background: #FFF;
 }
+.toast.error p,
+.toast.error svg{
+  background-color: #c52965;
+}
 div#cell-1-undefined,
 div#cell-2-undefined,
 div[data-column-id="1"],

@@ -59,14 +59,14 @@ const Detail = () => {
                                 <img src="/icons/phone-call.svg" alt="" />
                                 Phone
                             </div>
-                            <p>{data.phone}</p>
+                            <p>{data.phone ? data.phone : "NA"}</p>
                         </div>
                         <div>
                             <div className='flex flex-row gap gap-2 items-center'>
                                 <img src="/icons/mail-search.svg" alt="" />
                                 Email
                             </div>
-                            <p>{data.email ? data.email : "Not Available"}</p>
+                            <p>{data.email ? data.email : "NA"}</p>
                         </div>
                     </div>
                 </div>
@@ -90,7 +90,7 @@ const Detail = () => {
                                 <img src="/icons/detail.svg" alt="" />
                                 Description
                             </div>
-                            <p>{short(data.description, 150)}</p>
+                            <p>{data.description}</p>
                         </div>
                         <div className='mt-4 pb-2'>
                             <div className='flex flex-row gap gap-2 items-center text-[#778599]'>

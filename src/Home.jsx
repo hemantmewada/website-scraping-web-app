@@ -71,7 +71,8 @@ const Home = () => {
     // const [selectedRows, setSelectedRows] = React.useState([]);
     // const [toggledClearRows, setToggleClearRows] = React.useState(false);
     const [url, setUrl] = useState("");
-    const [loading, setLoading] = useState(false)
+    const [loading, setLoading] = useState(false);
+    const [getDataLoading, setGetDataLoading] = useState(false);
     
     const [data, setData] = useState([]);
     const handleClearRows = () => {
@@ -84,13 +85,16 @@ const Home = () => {
   
     useEffect(() => {
       getData();
-    }, [data]);
+    }, []);
   
     const getData = async () => {
       try {
+        setGetDataLoading(true);
         const {data} = await axios.get(`${config.API_URL}/website-scrape-list`);
         setData(data?.data);
+        setGetDataLoading(false);
       } catch (error) {
+        setGetDataLoading(false);
         console.log(`Error ----${error}`);
       }
     }
@@ -134,16 +138,24 @@ const Home = () => {
             <div className="bg-white">
                 <div className='bg-white main-table'>
                     {/* <button onClick={handleClearRows}>Clear Selected Rows</button> */}
-                    <DataTable
-                        columns={columns}
-                        data={data}
-                        // selectableRows
-                        // onSelectedRowsChange={handleChange}
-                        pagination
-                        // clearSelectedRows={toggledClearRows}
-                        // expandableRows
-                        // expandableRowsComponent={ExpandedComponent}
-                    />
+                    {
+                      getDataLoading ? (
+                        <div className="w-full text-center flex justify-center ">
+                          <img src="/icons/spinner.gif" width={"5%"} alt="" />
+                        </div>
+                      ) : (
+                        <DataTable
+                            columns={columns}
+                            data={data}
+                            // selectableRows
+                            // onSelectedRowsChange={handleChange}
+                            pagination
+                            // clearSelectedRows={toggledClearRows}
+                            // expandableRows
+                            // expandableRowsComponent={ExpandedComponent}
+                        />
+                      )
+                    }
                 </div>
             </div>
         </nav>
